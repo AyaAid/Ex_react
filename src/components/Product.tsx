@@ -1,4 +1,5 @@
 import React from "react";
+import "../style/ProductList.css"
 
 interface ProductProps {
   product: {
@@ -10,9 +11,9 @@ interface ProductProps {
 
 function Product({ product }: ProductProps) {
   return (
-    <li>
-      <h3>{product.name}</h3>
-      <p>Prix : {product.price} €</p>
+    <li className="product-item">
+      <h3 className="product-name">{product.name}</h3>
+      <p className="product-price">Prix : ${product.price}</p>
     </li>
   );
 }

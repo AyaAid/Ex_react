@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../App.css";
+import "../style/Toutdoux.css";
 import Toutdoux from "../components/Toutdoux";
 import Navbar from "../components/Navbar";
 

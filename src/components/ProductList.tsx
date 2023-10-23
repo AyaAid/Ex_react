@@ -1,7 +1,8 @@
 import React from 'react';
 import Product from './Product';
+import "../style/ProductList.css"
 
-interface Product {
+interface ProductProps {
   id: number;
   name: string;
   price: number;
@@ -9,7 +10,7 @@ interface Product {
 
 function ProductList() {
 
-  const products: Product[] = [
+  const products: ProductProps[] = [
     { id: 1, name: 'Produit 1', price: 10 },
     { id: 2, name: 'Produit 2', price: 15 },
     { id: 3, name: 'Produit 3', price: 20 },
@@ -17,8 +18,8 @@ function ProductList() {
   ];
 
   return (
-    <div>
-      <h2>Liste de Produits</h2>
+    <div className="product-list">
+      <h2 className="list-title">Liste de Produits</h2>
       <ul>
         {products.map((product) => (
           <Product key={product.id} product={product} />
